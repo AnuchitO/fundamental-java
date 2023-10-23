@@ -1,8 +1,17 @@
+clean:
+	rm -rf ./classes
+
 compile:
-	javac -cp .:lib/* src/main/java/dev/anuchito/exchange/ExchangeApplication.java
+	javac -cp .:libs/\* -d classes src/main/java/dev/anuchito/exchange/ExchangeApplication.java
 
 run:
-	java -cp .:lib/* dev.anuchito.exchange.Exchange
+	java -cp .:"libs/*":classes dev.anuchito.exchange.ExchangeApplication
+
+curl:
+	curl -v -X GET "localhost:8080"
 
 copy-deps:
 	 gradle copyDependencies
+
+wrapper:
+	gradle wrapper
