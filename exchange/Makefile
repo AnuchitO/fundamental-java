@@ -11,10 +11,10 @@ run:
 	java -cp .:"libs/*":classes dev.anuchito.exchange.ExchangeApplication
 
 curl:
-	curl -X GET "localhost:8080/rates/latest"
+	curl -X GET "localhost:8080/exchanges/rates"
 
 curl-verbose:
-	curl -v -X GET "localhost:8080/rates/latest"
+	curl -v -X GET "localhost:8080/exchanges/rates"
 
 copy-deps:
 	 gradle copyDependencies

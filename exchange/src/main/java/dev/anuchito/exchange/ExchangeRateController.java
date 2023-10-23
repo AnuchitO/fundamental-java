@@ -5,10 +5,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @RestController
-@RequestMapping("/rates")
+@RequestMapping("/exchanges")
 public class ExchangeRateController {
 
-	@GetMapping("/latest")
+	@GetMapping("/rates")
 	public String getLatestRate() {
 		return "hi anuchito yoru latest rate is here";
 	}
