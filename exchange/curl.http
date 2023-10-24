@@ -1,0 +1,6 @@
+// curl to /rates/latest
+
+curl -v -X GET "localhost:8080/rates/latest"
+
+
+curl -v -X GET "localhost:8080"
