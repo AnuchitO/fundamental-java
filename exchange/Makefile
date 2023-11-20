@@ -21,3 +21,7 @@ copy-deps:
 
 wrapper:
 	gradle wrapper
+
+install-java17-openjdk:
+	sdk install java 17.0.9-tem
+	
