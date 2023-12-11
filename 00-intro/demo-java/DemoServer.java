@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.net.InetSocketAddress;
 import java.util.List;
+
+
 public class DemoServer {
 	public static void main(String[] args) throws Exception {
 		HttpServer server = HttpServer.create(new InetSocketAddress(8080), 0);
@@ -47,8 +49,9 @@ public class DemoServer {
 				//  }""";
 				// byte[] response = loan.getBytes();
 
-				exchange.sendResponseHeaders(200, response.length);
+
 				exchange.getResponseHeaders().set("Content-Type", "application/json");
+				exchange.sendResponseHeaders(200, response.length);
 				resp.write(response);
 
 			} else {
