@@ -118,7 +118,6 @@ public class Variable {
 ```
 
 ## 4. Loop
-
 ### 4.1 For loop
 
 ```java
