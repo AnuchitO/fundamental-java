@@ -111,7 +111,6 @@ public class Variable {
 				// array of another type
 				int[] numbers = {1, 2, 3, 4, 5};
 				System.out.println(numbers);
-
 				System.out.println(numbers[0]);
 		}
 }
