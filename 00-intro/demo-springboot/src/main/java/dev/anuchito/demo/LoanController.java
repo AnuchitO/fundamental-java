@@ -1,6 +1,5 @@
 package dev.anuchito.demo;
 
-import java.util.List;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,7 +13,7 @@ public class LoanController {
 
 		Loan loan = new Loan();
 		loan.setLoanId("L001");
-		loan.setApplicantName("Anuchito");
+		loan.setApplicantName("Laumcing");
 		loan.setLoanAmount(1000000);
 		loan.setLoanTerm(12);
 		loan.setStatus("Approved");

@@ -6,7 +6,6 @@ import java.io.OutputStream;
 import java.net.InetSocketAddress;
 import java.util.List;
 public class DemoServer {
-	// demo write http server /loan with standard java library
 	public static void main(String[] args) throws Exception {
 		HttpServer server = HttpServer.create(new InetSocketAddress(8080), 0);
 		server.createContext("/loans", new LoanHandler());
