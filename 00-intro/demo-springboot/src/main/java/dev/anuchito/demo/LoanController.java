@@ -3,12 +3,15 @@ package dev.anuchito.demo;
 import java.util.List;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 @RestController
 public class LoanController {
 
-	@GetMapping("/loans")
-	public List<Loan> getLoan() {
+	@GetMapping("/loans/{id}")
+	public Loan getLoan(@PathVariable("id") String id) {
+		System.out.println("Path id: " + id);
+
 		Loan loan = new Loan();
 		loan.setLoanId("L001");
 		loan.setApplicantName("Anuchito");
@@ -17,6 +20,6 @@ public class LoanController {
 		loan.setStatus("Approved");
 		loan.setInterestRate(7.5);
 
-		return List.of(loan);
+		return loan;
 	}
 }
