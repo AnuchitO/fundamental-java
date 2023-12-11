@@ -11,4 +11,4 @@ clean:
 	rm -f *.class
 
 curl:
-	curl -v http://localhost:8080/loans?status=APPROVED
+	curl -v -X GET "localhost:8080/loans/L001?status=APPROVED"

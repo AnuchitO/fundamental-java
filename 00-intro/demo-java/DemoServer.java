@@ -4,6 +4,7 @@ import com.sun.net.httpserver.HttpServer;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.InetSocketAddress;
+import java.util.List;
 public class DemoServer {
 	// demo write http server /loan with standard java library
 	public static void main(String[] args) throws Exception {
@@ -21,8 +22,9 @@ public class DemoServer {
 			OutputStream resp = exchange.getResponseBody();
 
 			if ("GET".equals(method)) {
-				System.out.println("GET request received");
 				String query = exchange.getRequestURI().getQuery();
+				String path = exchange.getRequestURI().getPath();
+				System.out.println("Path: " + path);
 				System.out.println("Query: " + query);
 
 				Loan loan = new Loan();
@@ -32,7 +34,8 @@ public class DemoServer {
 				loan.setLoanTerm(12);
 				loan.setStatus("APPROVED");
 				loan.setInterestRate(7.5);
-					byte[] response = loan.toJSON().getBytes();
+
+				byte[] response = loan.toJSON().getBytes();
 
 				//  String loan = """
 				// 	{
