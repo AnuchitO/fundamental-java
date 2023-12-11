@@ -17,15 +17,6 @@ public class LoanController {
 		loan.setStatus("Approved");
 		loan.setInterestRate(7.5);
 
-// 		String l = """{
-// 	"loanId": "L001",
-// 	"applicantName": "Laumcing",
-// 	"loanAmount": 10000.000000,
-// 	"loanTerm": 12,
-// 	"status": "APPROVED",
-// 	"interestRate": 7.500000
-// }""";
-
 		return List.of(loan);
 	}
 }
