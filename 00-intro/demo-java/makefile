@@ -6,3 +6,6 @@ run:
 runcp:
 	javac -cp .:lib/* DemoServer.java
 	java -cp .:lib/* DemoServer
+
+clean: 
+	rm -f *.class
