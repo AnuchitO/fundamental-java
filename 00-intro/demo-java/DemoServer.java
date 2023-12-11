@@ -32,21 +32,27 @@ public class DemoServer {
 				loan.setLoanTerm(12);
 				loan.setStatus("APPROVED");
 				loan.setInterestRate(7.5);
-			
-				byte[] response = loan.toJSON().getBytes();
+					byte[] response = loan.toJSON().getBytes();
+
+				//  String loan = """
+				// 	{
+				// 	"loanId": "L001",
+				// 	"applicantName": "Laumcing",
+				// 	"loanAmount": 10000,
+				// 	"loanTerm": 12,
+				// 	"status": "APPROVED",
+				// 	"interestRate": 7.5
+				//  }""";
+				// byte[] response = loan.getBytes();
 
 				exchange.sendResponseHeaders(200, response.length);
 				exchange.getResponseHeaders().set("Content-Type", "application/json");
 				resp.write(response);
 
-			} else if ("POST".equals(method)) {
-				System.out.println("POST request received");
-				// response to client that the request was successful
-				exchange.sendResponseHeaders(201, 0);
 			} else {
 				// Handle unsupported HTTP methods
-				resp.write("Method not allowed".getBytes());
 				exchange.sendResponseHeaders(405, 0);
+				resp.write("Method not allowed".getBytes());
 			}
 
 			resp.close();

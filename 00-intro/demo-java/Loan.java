@@ -59,10 +59,10 @@ public class Loan {
 				{
 					"loanId": "%s",
 					"applicantName": "%s",
-					"loanAmount": %f,
+					"loanAmount": %.2f,
 					"loanTerm": %d,
 					"status": "%s",
-					"interestRate": %f
+					"interestRate": %.2f
 				}
 			""".replaceAll("	", "");
 			return String.format(format, loanId, applicantName, loanAmount, loanTerm, status, interestRate);
