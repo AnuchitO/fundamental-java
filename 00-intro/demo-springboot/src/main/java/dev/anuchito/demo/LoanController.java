@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @RestController
 public class LoanController {
 
-	@GetMapping("/loan")
+	@GetMapping("/loans")
 	public List<Loan> getLoan() {
 		Loan loan = new Loan();
 		loan.setLoanId("L001");
