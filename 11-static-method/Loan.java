@@ -1,7 +1,7 @@
 public class Loan {
-	String applicantName;
-	double loanAmount;
-	float interestRate;
+	private String applicantName;
+	private double loanAmount;
+	private float interestRate;
 
 	public Loan() {
 	}
@@ -15,7 +15,7 @@ public class Loan {
 	}
 
 	public void show() {
-		System.out.println("Loan:: show()" + applicantName);
+		System.out.println("Loan:: show() : " + this.applicantName);
 	}
 
 	public String toString() {

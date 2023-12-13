@@ -1,12 +1,15 @@
 public class Main {
 	public static void main(String[] args) {
-		Loan.show();
-		Loan.info();
-
-		Loan laumcing = new Loan();
+		Loan laumcing = new Loan("Laumcing");
 		laumcing.show();
-		laumcing.info();
+	 
+	
+		Main.infoMain();
 
-		System.out.println("--------------------");
+		Loan.info();
+	}
+
+	public static void infoMain() {
+		System.out.println("Main:: static - info()");
 	}
 }
