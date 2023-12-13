@@ -899,8 +899,8 @@
     },
     {
       "type": "text",
-      "version": 122,
-      "versionNonce": 704933116,
+      "version": 123,
+      "versionNonce": 1832344669,
       "isDeleted": false,
       "id": "l5dPmhpCR6uSHrIwRumKd",
       "fillStyle": "solid",
@@ -920,7 +920,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1702458383545,
+      "updated": 1702465561673,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -935,8 +935,8 @@
     },
     {
       "type": "text",
-      "version": 162,
-      "versionNonce": 948039876,
+      "version": 163,
+      "versionNonce": 700507123,
       "isDeleted": false,
       "id": "cJ7ODmXFByceUGg0d49KX",
       "fillStyle": "solid",
@@ -956,7 +956,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1702458383545,
+      "updated": 1702465561673,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -1185,7 +1185,7 @@
       "containerId": "_JZDrDd063UH99_vbWYFS",
       "originalText": "<interface>\nLoan\n\n+ calculateInterest()",
       "lineHeight": 1.2,
-      "baseline": 91
+      "baseline": 90
     },
     {
       "type": "rectangle",
@@ -1267,7 +1267,7 @@
       "containerId": "Z5eci1T5q_70tJifMfy9I",
       "originalText": "Mortgage\n\n+ calculateInterest()",
       "lineHeight": 1.2,
-      "baseline": 67
+      "baseline": 66
     },
     {
       "type": "rectangle",
@@ -1349,7 +1349,7 @@
       "containerId": "H2PZqy2PFgRkJTqtDa7JN",
       "originalText": "Auto\n\n+ calculateInterest()",
       "lineHeight": 1.2,
-      "baseline": 67
+      "baseline": 66
     },
     {
       "type": "arrow",
@@ -1442,7 +1442,7 @@
       "containerId": "tF3d9mtNM7fL_QELAUEyz",
       "originalText": "implements",
       "lineHeight": 1.2,
-      "baseline": 19
+      "baseline": 18
     },
     {
       "type": "arrow",
@@ -1535,7 +1535,7 @@
       "containerId": "fJD_uedNKAZKOe4ZO6zBs",
       "originalText": "implements",
       "lineHeight": 1.2,
-      "baseline": 19
+      "baseline": 18
     },
     {
       "type": "rectangle",
@@ -1613,7 +1613,7 @@
       "containerId": "AYnZ9gKLf1UnTRizndrbs",
       "originalText": "BaseLoan\n\n",
       "lineHeight": 1.2,
-      "baseline": 67
+      "baseline": 66
     },
     {
       "type": "rectangle",
@@ -1691,7 +1691,7 @@
       "containerId": "5vbqxIhKK09FrLh933X-7",
       "originalText": "<interface>\nPayment\n\n+ paymentOptions()",
       "lineHeight": 1.2,
-      "baseline": 91
+      "baseline": 90
     },
     {
       "type": "arrow",
@@ -1784,7 +1784,7 @@
       "containerId": "7Sd_oeFpFBagOn_7DteOU",
       "originalText": "implements",
       "lineHeight": 1.2,
-      "baseline": 19
+      "baseline": 18
     },
     {
       "type": "arrow",
@@ -1877,7 +1877,7 @@
       "containerId": "Ep3wkz83trlwJT-zUIP9W",
       "originalText": "implements",
       "lineHeight": 1.2,
-      "baseline": 19
+      "baseline": 18
     },
     {
       "type": "arrow",
@@ -1970,7 +1970,7 @@
       "containerId": "MkD2HNnY12FEwlWwdoycd",
       "originalText": "extends",
       "lineHeight": 1.2,
-      "baseline": 19
+      "baseline": 18
     },
     {
       "type": "arrow",
@@ -2063,7 +2063,7 @@
       "containerId": "9ZQ4xendLKo408mEm0OJl",
       "originalText": "extends",
       "lineHeight": 1.2,
-      "baseline": 19
+      "baseline": 18
     },
     {
       "type": "rectangle",
@@ -2141,7 +2141,7 @@
       "containerId": "-VPK_SrB8AzM-9qedo-qB",
       "originalText": "Mortgage\n\n",
       "lineHeight": 1.2,
-      "baseline": 67
+      "baseline": 66
     },
     {
       "type": "rectangle",
@@ -2219,7 +2219,7 @@
       "containerId": "ziDpzYf99qUSf3tX11gbS",
       "originalText": "Auto\n\n",
       "lineHeight": 1.2,
-      "baseline": 67
+      "baseline": 66
     },
     {
       "type": "rectangle",
@@ -2297,7 +2297,7 @@
       "containerId": "cdi35-tCHrPnUaESkKA1a",
       "originalText": "<<abstract>>\nBaseLoan\n\n+ calculateInterest()",
       "lineHeight": 1.2,
-      "baseline": 91
+      "baseline": 90
     },
     {
       "type": "rectangle",
@@ -2375,7 +2375,7 @@
       "containerId": "69ZLhiu1xYZGuAr3dtOL7",
       "originalText": "<interface>\nPayment\n\n+ paymentOptions()",
       "lineHeight": 1.2,
-      "baseline": 91
+      "baseline": 90
     },
     {
       "type": "arrow",
@@ -2468,7 +2468,7 @@
       "containerId": "ErdSGONdp9QNY2EndQvcs",
       "originalText": "implements",
       "lineHeight": 1.2,
-      "baseline": 19
+      "baseline": 18
     },
     {
       "type": "arrow",
@@ -2561,7 +2561,7 @@
       "containerId": "atzovPzHEMticCmow-XMS",
       "originalText": "implements",
       "lineHeight": 1.2,
-      "baseline": 19
+      "baseline": 18
     },
     {
       "type": "arrow",
@@ -2654,7 +2654,7 @@
       "containerId": "lfi_0SpQg86vL5I4hV2lx",
       "originalText": "extends",
       "lineHeight": 1.2,
-      "baseline": 19
+      "baseline": 18
     },
     {
       "type": "arrow",
@@ -2747,12 +2747,12 @@
       "containerId": "iF9USDNI0TyxQ2ZhWe-HO",
       "originalText": "extends",
       "lineHeight": 1.2,
-      "baseline": 19
+      "baseline": 18
     },
     {
       "type": "text",
-      "version": 152,
-      "versionNonce": 993100156,
+      "version": 153,
+      "versionNonce": 2049296573,
       "isDeleted": false,
       "id": "YqH3kAmywvWCJk8wg-GoF",
       "fillStyle": "solid",
@@ -2772,7 +2772,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1702461382676,
+      "updated": 1702465561673,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -2787,8 +2787,8 @@
     },
     {
       "type": "text",
-      "version": 194,
-      "versionNonce": 309410756,
+      "version": 195,
+      "versionNonce": 2055597459,
       "isDeleted": false,
       "id": "4REmPcPH3TB-k6zxJ2Uw0",
       "fillStyle": "solid",
@@ -2808,7 +2808,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1702461385108,
+      "updated": 1702465561673,
       "link": null,
       "locked": false,
       "fontSize": 20,
