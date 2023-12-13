@@ -815,5 +815,13 @@ what is annotation?
 - Annotation Processor is a tool that processes annotation
 
 ```java
+public class Main {
+		public static void main(String[] args) {
+				// @Override
+				// @Deprecated
+				// @SuppressWarnings
+		}
+}
+```
 
 

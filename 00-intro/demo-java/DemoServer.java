@@ -38,16 +38,16 @@ public class DemoServer {
 
 				byte[] response = loan.toJSON().getBytes();
 
-				//  String loan = """
-				// 	{
-				// 	"loanId": "L001",
-				// 	"applicantName": "Laumcing",
-				// 	"loanAmount": 10000,
-				// 	"loanTerm": 12,
-				// 	"status": "APPROVED",
-				// 	"interestRate": 7.5
-				//  }""";
-				// byte[] response = loan.getBytes();
+//				  String loan = """
+//				 	{
+//				 	"loanId": "L001",
+//				 	"applicantName": "Laumcing",
+//				 	"loanAmount": 10000,
+//				 	"loanTerm": 12,
+//				 	"status": "APPROVED",
+//				 	"interestRate": 7.5
+//				  }""";
+//				 byte[] response = loan.getBytes();
 
 
 				exchange.getResponseHeaders().set("Content-Type", "application/json");
