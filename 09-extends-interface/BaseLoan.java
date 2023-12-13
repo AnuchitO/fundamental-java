@@ -13,11 +13,6 @@ public class BaseLoan {
 		this.interestRate = interestRate;
 	}
 
-	public double calculateInterest() {
-		System.out.println("BaseLoan:: Interest()");
-		return 4.4;
-	}
-
 	public String getApplicantName() {
 		return applicantName;
 	}
