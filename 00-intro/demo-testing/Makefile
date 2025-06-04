@@ -47,7 +47,7 @@ filter-all:
 update-loan:
 	curl -X PUT $(HOST)/api/loans/1 \
 	  -H "Content-Type: application/json" \
-	  -d '{"applicantName": "John Doe", "loanAmount": 15000.00, "loanTerm": 24, "interestRate": 5.5, "status": "PENDING"}'
+	  -d '{"loanId": "L001", "applicantName": "John Doe", "loanAmount": 15000.00, "loanTerm": 24, "interestRate": 5.5, "status": "APPROVED"}'
 
 # Partial update loan (replace with actual loanId after creating)
 .PHONY: patch-loan
