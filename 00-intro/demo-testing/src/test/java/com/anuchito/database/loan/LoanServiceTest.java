@@ -3,6 +3,7 @@ package com.anuchito.database.loan;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.Mockito.when;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +26,7 @@ public class LoanServiceTest {
     @BeforeEach
     void setUp() {
         MockitoAnnotations.openMocks(this);
-        
+
         testLoan = new Loan();
         testLoan.setId(1L);
         testLoan.setLoanId("L001");
@@ -42,47 +43,47 @@ public class LoanServiceTest {
     void testGetAllLoans() {
         List<Loan> loans = new ArrayList<>();
         loans.add(testLoan);
-        
+
         when(loanRepository.findAll()).thenReturn(loans);
-        
+
         List<Loan> result = loanService.getAllLoans();
-        
-        assert result.size() == 1;
-        assert result.get(0).equals(testLoan);
+
+        assertThat(result).hasSize(1);
+        assertThat(result.get(0)).isEqualTo(testLoan);
     }
 
     @Test
     void testGetLoanById_ExistingLoan() {
         when(loanRepository.findById(anyLong())).thenReturn(Optional.of(testLoan));
-        
+
         Optional<Loan> result = loanService.getLoanById(1L);
-        
-        assert result.isPresent();
-        assert result.get().equals(testLoan);
+
+        assertThat(result).isPresent();
+        assertThat(result.get()).isEqualTo(testLoan);
     }
 
     @Test
     void testGetLoanById_NonExistingLoan() {
         when(loanRepository.findById(anyLong())).thenReturn(Optional.empty());
-        
+
         Optional<Loan> result = loanService.getLoanById(999L);
-        
-        assert !result.isPresent();
+
+        assertThat(result).isEmpty();
     }
 
     @Test
     void testSaveLoan() {
         when(loanRepository.save(any(Loan.class))).thenReturn(testLoan);
-        
+
         Loan result = loanService.saveLoan(testLoan);
-        
-        assert result.equals(testLoan);
+
+        assertThat(result).isEqualTo(testLoan);
     }
 
     @Test
     void testDeleteLoan() {
         loanService.deleteLoan(1L);
-        
+
         // We can't directly verify the delete operation since it's void
         // But we can verify the repository was called
         // This is a limitation of testing void methods

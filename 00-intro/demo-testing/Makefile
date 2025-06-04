@@ -1,5 +1,10 @@
 HOST ?= http://localhost:8080
 
+# run test coverage
+.PHONY: test-coverage
+test-coverage:
+	./gradlew test jacocoTestReport --info
+
 # Create a test loan
 .PHONY: create-loan
 create-loan:

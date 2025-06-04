@@ -23,14 +23,14 @@ public class Loan {
     private String applicantName;
 
     @Column(name = "loan_amount")
-    private double loanAmount;
+    private Double loanAmount;
 
     @Column(name = "loan_term")
-    private int loanTerm;
+    private Integer loanTerm;
 
     @Column(name = "status")
     private String status;
 
     @Column(name = "interest_rate")
-    private double interestRate;
+    private Double interestRate;
 }
