@@ -17,20 +17,8 @@ public class LoanService {
         return this.loanRepository.findAll();
     }
 
-    public Optional<Loan> getLoanByLoanId(String loanId) {
-        if (loanId == null || loanId.isEmpty()) {
-            return Optional.empty();
-        }
-        if (loanId.length() > 20) {
-            throw new IllegalArgumentException("Loan ID must not exceed 20 characters");
-        }
-        if (!loanId.matches("^[a-zA-Z0-9]+$")) {
-            throw new IllegalArgumentException("Loan ID must be alphanumeric");
-        }
-        if (loanId.contains(" ")) {
-            throw new IllegalArgumentException("Loan ID must not contain spaces");
-        }
-        return this.loanRepository.findByLoanId(loanId);
+    public Optional<Loan> getLoanById(Long id) {
+        return this.loanRepository.findById(id);
     }
 
     public Loan saveLoan(Loan loan) {

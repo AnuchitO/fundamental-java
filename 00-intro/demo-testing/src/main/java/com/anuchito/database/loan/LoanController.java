@@ -1,8 +1,8 @@
-package  com.anuchito.database.loan;
+package com.anuchito.database.loan;
 
 import java.util.List;
 import java.util.Optional;
-
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -20,8 +20,16 @@ public class LoanController {
         return this.loanService.getAllLoans();
     }
 
-    @GetMapping("/{loanId}")
-    public Optional<Loan> getLoansByLoanId(@PathVariable String loanId) {
-        return this.loanService.getLoanByLoanId(loanId);
+    @GetMapping("/{id}")
+    public ResponseEntity<Loan> getLoanById(@PathVariable Long id) {
+        return loanService.getLoanById(id)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
+    }
+
+    @PostMapping
+    public ResponseEntity<Loan> createLoan(@RequestBody Loan loan) {
+        Loan createdLoan = loanService.saveLoan(loan);
+        return ResponseEntity.ok(createdLoan);
     }
 }

@@ -5,7 +5,7 @@ HOST ?= http://localhost:8080
 create-loan:
 	curl -X POST $(HOST)/api/loans \
 	  -H "Content-Type: application/json" \
-	  -d '{"applicantName": "John Doe", "loanAmount": 10000.00, "loanTerm": 12, "interestRate": 5.5}'
+	  -d '{"loanId": "L001", "applicantName": "John Doe", "loanAmount": 10000.00, "loanTerm": 12, "interestRate": 5.5, "status": "PENDING"}'
 
 # Get all loans
 .PHONY: get-loans
@@ -15,7 +15,7 @@ get-loans:
 # Get loan by ID (replace with actual loanId after creating)
 .PHONY: get-loan
 get-loan:
-	curl -X GET $(HOST)/api/loans/L001
+	curl -X GET $(HOST)/api/loans/1
 
 # Filter loans by name
 .PHONY: filter-name
@@ -35,31 +35,31 @@ filter-term:
 # Filter loans by status
 .PHONY: filter-status
 filter-status:
-	curl -X GET "$(HOST)/api/loans?status=APPROVED"
+	curl -X GET "$(HOST)/api/loans?status=PENDING"
 
 # Filter loans by multiple parameters
 .PHONY: filter-all
 filter-all:
-	curl -X GET "$(HOST)/api/loans?name=John&amount=10000&term=12&status=APPROVED"
+	curl -X GET "$(HOST)/api/loans?name=John&amount=10000&term=12&status=PENDING"
 
 # Update loan (replace with actual loanId after creating)
 .PHONY: update-loan
 update-loan:
-	curl -X PUT $(HOST)/api/loans/L001 \
+	curl -X PUT $(HOST)/api/loans/1 \
 	  -H "Content-Type: application/json" \
-	  -d '{"applicantName": "John Doe", "loanAmount": 15000.00, "loanTerm": 24, "interestRate": 5.5, "status": "APPROVED"}'
+	  -d '{"applicantName": "John Doe", "loanAmount": 15000.00, "loanTerm": 24, "interestRate": 5.5, "status": "PENDING"}'
 
 # Partial update loan (replace with actual loanId after creating)
 .PHONY: patch-loan
 patch-loan:
-	curl -X PATCH $(HOST)/api/loans/L001 \
+	curl -X PATCH $(HOST)/api/loans/1 \
 	  -H "Content-Type: application/json" \
 	  -d '{"status": "APPROVED"}'
 
 # Delete loan (replace with actual loanId after creating)
 .PHONY: delete-loan
 delete-loan:
-	curl -X DELETE $(HOST)/api/loans/L001
+	curl -X DELETE $(HOST)/api/loans/1
 
 # Run all tests
 .PHONY: test-all

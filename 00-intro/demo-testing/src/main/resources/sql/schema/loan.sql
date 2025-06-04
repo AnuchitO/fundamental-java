@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS loan (
     id SERIAL PRIMARY KEY,
-    loan_id VARCHAR(50) NOT NULL UNIQUE,
+    loan_id VARCHAR(50) NOT NULL,
     applicant_name VARCHAR(255) NOT NULL DEFAULT '',
     loan_amount DECIMAL(15, 2) NOT NULL DEFAULT 0.00,
     loan_term INT NOT NULL DEFAULT 0,

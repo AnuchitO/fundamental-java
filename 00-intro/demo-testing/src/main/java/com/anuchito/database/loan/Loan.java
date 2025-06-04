@@ -16,7 +16,7 @@ public class Loan {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "loan_id", length = 50, unique = true)
+    @Column(name = "loan_id", length = 50)
     private String loanId;
 
     @Column(name = "applicant_name")
