@@ -1,0 +1,2 @@
+Loan: {"loanId": "L001","applicantName": "Laumcing","loanAmount": 10000,"loanTerm": 12,"status": "APPROVED","interestRate": 7.5, "personId": "P001"}
+Person: {"personId": "P001","name": "Laumcing","age": 30,"gender": "M"}
